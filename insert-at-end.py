@@ -4,19 +4,17 @@ class Listnode:
         self.next=next
 
 class Solution:
-    def __init__(self,head=None):
-        self.head=head
-        
-    def insert_at_end(self, data):
-        new_node=Listnode(data)
-        if self.head==None:
-            self.head=new_node
-        else:
-            p=self.head
-            while p.next != None:
-                p=p.next
-            p.next=new_node
-            
+
+    def insert_at_end(self, head, data):
+        new_node = Listnode(data)
+        if head is None:
+            return new_node
+        p = head
+        while p.next is not None:
+            p = p.next
+        p.next = new_node
+        return head
+    
 def print_list(head):
     curr=head
     vals=[]

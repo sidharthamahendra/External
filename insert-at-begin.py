@@ -15,9 +15,9 @@ def print_list(head):
     cur = head
     vals = []
     while cur:
-        vals.append(str(cur.data))
+        vals.append(cur.data)
         cur = cur.next
-    print("->".join(vals))
+    print(vals)
 
 
 if __name__ == "__main__":
